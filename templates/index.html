@@ -89,24 +89,10 @@
             margin-bottom:34px;
         }
 
-        .sejong-img{
-            width:150px;
-            height:150px;
-
-            object-fit:cover;
-
-            border-radius:32px;
-
-            border:5px solid rgba(255,255,255,.75);
-
-            box-shadow:
-            0 12px 28px rgba(0,0,0,.12);
-        }
-
         .title{
             font-size:68px;
             font-weight:800;
-            line-height:1;
+            line-height:1.1;
             letter-spacing:-3px;
 
             background:
@@ -121,7 +107,7 @@
         }
 
         .subtitle{
-            margin-top:18px;
+            margin-top:14px;
             color:#6b7280;
             font-size:18px;
         }
@@ -459,11 +445,6 @@
             .word-grid{
                 grid-template-columns:1fr;
             }
-
-            .sejong-img{
-                width:120px;
-                height:120px;
-            }
         }
 
     </style>
@@ -479,13 +460,7 @@
 
 <div class="container">
 
-    <!-- 상단 -->
     <div class="hero">
-
-        <img
-            src="{{ url_for('static', filename='sejong.png') }}"
-            class="sejong-img"
-        >
 
         <div>
 
@@ -502,7 +477,6 @@
 
     </div>
 
-    <!-- flash -->
     {% with messages = get_flashed_messages() %}
       {% if messages %}
         {% for msg in messages %}
@@ -513,10 +487,8 @@
       {% endif %}
     {% endwith %}
 
-    <!-- 검색 + 추가 -->
     <div class="top-grid">
 
-        <!-- 검색 -->
         <div class="glass search-card">
 
             <div class="section-title">
@@ -548,7 +520,6 @@
 
         </div>
 
-        <!-- 추가 -->
         <div class="glass add-card">
 
             <div class="section-title">
@@ -597,7 +568,6 @@
 
     </div>
 
-    <!-- 검색 결과 -->
     {% if search %}
 
         <div class="list-title">
@@ -649,7 +619,6 @@
 
     {% endif %}
 
-    <!-- 전체 목록 -->
     <div class="list-title">
         📚 전체 단어
     </div>
